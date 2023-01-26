@@ -5,6 +5,9 @@ import Home from './pages/Home'
 import Overlay from './components/Overlay'
 import SideNav from './components/SideNav'
 import Footer from './components/Footer'
+import Cart from './pages/Cart';
+import Products from './pages/Products'
+import NotFound from './pages/NotFound'
 
 const App: FC = (): ReactElement => {
   const [showSideNav, setShowSideNav] = useState<boolean>(false)
@@ -47,8 +50,9 @@ const App: FC = (): ReactElement => {
         <Navbar handleModeChange={handleModeChange} showSideNav={setShowSideNav} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<>Cart</>} />
-          <Route path="*" element={<>404</>} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
