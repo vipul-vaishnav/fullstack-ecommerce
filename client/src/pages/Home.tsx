@@ -1,10 +1,30 @@
 import React, { FC, ReactElement } from 'react'
+import HERO_ILLUSTRATION from "./../assets/hero.svg"
+import { useNavigate } from 'react-router-dom';
 
 const Home: FC = (): ReactElement => {
+  const navigate = useNavigate()
+
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium animi rem cupiditate cumque libero vitae ipsam porro nostrum aperiam voluptatem, odit eius debitis, tempora blanditiis possimus at! Perspiciatis distinctio quas asperiores rem porro voluptatibus voluptas dolorum sit consequuntur eveniet consequatur voluptate maiores fugit blanditiis, impedit quasi molestiae dicta eaque vel cupiditate ipsum quo eius commodi. Harum quisquam nobis unde eligendi nisi exercitationem est consectetur rem corrupti? Voluptates iure quis ratione porro officia soluta laboriosam pariatur aspernatur perferendis est rem, maxime dolor eum veritatis, quod doloremque numquam velit repellat autem cupiditate. Autem aut ratione voluptatibus, voluptatem sint adipisci est doloribus repudiandae assumenda veritatis aspernatur itaque dicta? Assumenda, quibusdam reiciendis corporis, at magnam obcaecati ab possimus expedita fugit architecto, rerum reprehenderit a nobis commodi! Perspiciatis laborum voluptatum eum inventore dolores veniam quasi, tenetur illum possimus tempore magni omnis, ut, sapiente ratione dolorum expedita minus facilis iure ullam esse veritatis nihil laudantium fuga. Sequi soluta voluptatum hic officia aperiam consequuntur dolore fugit, quos ea voluptates adipisci dicta vero deserunt accusantium eius amet est praesentium voluptatem possimus. Sunt alias repudiandae minus doloribus sequi totam nulla culpa nisi! A repellat ut excepturi esse, illum cupiditate provident impedit animi neque cumque ea voluptates eius consequuntur laudantium. Accusamus ipsa voluptatibus corrupti. Ut, reprehenderit recusandae cum quas vero ullam? Animi debitis quam ullam omnis nesciunt, molestias eveniet unde accusantium impedit vero praesentium perspiciatis soluta cupiditate rerum alias voluptatibus error voluptatem, reprehenderit magni velit doloribus! Quisquam dolor fugiat, animi tenetur saepe quos nisi corrupti iste voluptates sint vitae adipisci pariatur soluta consectetur accusantium eum atque! Recusandae, vel asperiores. Nobis magni tempore, obcaecati blanditiis autem magnam laboriosam cupiditate nemo rerum beatae iusto nisi exercitationem accusantium animi ipsam perspiciatis veniam sint eos? Facilis vel, ut praesentium, non hic, modi nobis ratione excepturi rem ipsa voluptas reiciendis. Quis eligendi amet ratione quod deserunt dicta qui. Quis voluptas reprehenderit rerum deleniti aspernatur cumque quibusdam consequatur ratione natus? Corporis beatae error debitis architecto maxime repellendus tempora est inventore adipisci dolores. Id cumque autem sint, dolore eum iusto earum ullam rem et ad corporis vero eos harum iure facilis error quidem amet sapiente? Ratione corrupti nihil voluptates non at tenetur odit perspiciatis quibusdam alias dolorem, provident necessitatibus nesciunt quae autem eum tempora reprehenderit possimus quaerat deleniti in aliquam modi, sit cum? Odio, nulla sunt dolore aut distinctio tempora placeat facilis necessitatibus nisi? Dolores perferendis odit id! Maxime quis laboriosam, soluta nisi laudantium culpa nihil amet.
-    </div>
+    <main className="grid grid-cols-1 gap-12 py-8 md:grid-cols-2 md:items-center">
+      <div>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl md:text-left font-bold text-center mb-8">A brand new way to shopping</h2>
+        <p className="text-center text-zinc-600 mb-8 md:text-left">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, atque consequatur minus perferendis, numquam consequuntur dolor expedita aperiam est explicabo cumque ducimus sunt quasi cum iste in sapiente ex laudantium.
+        </p>
+        <button onClick={() => navigate("/products")} className="px-4 py-2 border-2 border-indigo-600 bg-indigo-600 text-white rounded-md flex items-center gap-4 mx-auto md:mx-0">
+          <p>
+            Explore Products
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+          </svg>
+        </button>
+      </div>
+      <div className="text-center">
+        <img src={HERO_ILLUSTRATION} alt="hero-image" className="w-full" />
+      </div>
+    </main>
   )
 }
 

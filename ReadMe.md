@@ -4,3 +4,4 @@ Tech Stack:
 
 - ReactJS
 - TypeScript
+- TailwindCSS
