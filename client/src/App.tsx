@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from './pages/Home'
 import Overlay from './components/Overlay'
 import SideNav from './components/SideNav'
+import Footer from './components/Footer'
 
 const App: FC = (): ReactElement => {
   const [showSideNav, setShowSideNav] = useState<boolean>(false)
@@ -50,6 +51,7 @@ const App: FC = (): ReactElement => {
           <Route path="*" element={<>404</>} />
         </Routes>
       </div>
+      <Footer />
       {showSideNav && <>
         <SideNav hideSideNav={setShowSideNav} handleModeChange={handleModeChange} />
         <Overlay hideSideNav={setShowSideNav} />
